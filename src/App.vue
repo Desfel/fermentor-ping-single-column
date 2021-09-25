@@ -90,7 +90,7 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: $lightGrey;
+      background: $light;
 
       .page-wrapper {
         width: 100%;
