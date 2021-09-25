@@ -187,6 +187,7 @@ export default {
 
     button {
       width: 200px;
+      flex: 1 0 auto;
       padding: 19px 0;
       margin-left: 16px;
       background: $primaryColor;
