@@ -1,7 +1,21 @@
 /* Misc */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
 
 $vue-color: #46bd87;
 $danger-color: #ea4d46;
+
+$primaryColor: hsl(223, 87%, 63%);
+
+$secondaryColor1: hsl(223, 100%, 88%);
+$secondaryColor2: hsl(354, 100%, 66%);
+
+$neutralColor1: hsl(0, 0%, 59%);
+$neutralColor2: hsl(209, 33%, 12%);
+
+$light: #fff;
+$lightGrey: #F2F2F2;
+
+$textFont: 'Libre Franklin', sans-serif;
 
 /* Navbar */
 
@@ -9,3 +23,15 @@ $navbar-height: 3.6rem;
 $navbar-color: #fff;
 $navbar-offline-color: #333;
 $navbar-link-color: #2c3e50;
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('~@/assets/fonts/icomoon.eot?i3z366');
+  src: url('~@/assets/fonts/icomoon.eot?i3z366#iefix') format('embedded-opentype'),
+  url('~@/assets/fonts/icomoon.ttf?i3z366') format('truetype'),
+  url('~@/assets/fonts/icomoon.woff?i3z366') format('woff'),
+  url('~@/assets/fonts/icomoon.svg?i3z366#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

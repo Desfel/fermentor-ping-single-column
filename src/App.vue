@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <nav-bar></nav-bar>
     <div class="main-wrapper">
       <router-view />
     </div>
@@ -20,13 +19,12 @@
   </div>
 </template>
 <script>
-import NavBar from '@/components/NavBar'
 import NewContentAvailableToastr from '@/components/NewContentAvailableToastr'
 import AppleAddToHomeScreenModal from '@/components/AppleAddToHomeScreenModal'
 import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
-  components: { NavBar, NewContentAvailableToastr, AppleAddToHomeScreenModal },
+  components: { NewContentAvailableToastr, AppleAddToHomeScreenModal },
   computed: {
     ...mapGetters('app', ['newContentAvailable']),
     ...mapState('app', ['showAddToHomeScreenModalForApple', 'refreshingApp'])
@@ -39,12 +37,35 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/theme/variables.scss';
+
 body {
   margin: 0;
 
   a {
     font-weight: 500;
     text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1,
+  p {
+    font-family: $textFont;
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+    line-height: 24px;
+    color: $neutralColor2;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 
   #app {
@@ -61,29 +82,20 @@ body {
       right: 10px;
     }
 
-    .apple-add-to-home-screen-modal {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      top: 0;
-      left: 0;
-      height: fit-content;
-      width: fit-content;
-      margin: auto;
-      z-index: 1000;
-    }
-
     .main-wrapper {
-      margin-top: 3.6rem;
-      padding: 20px;
+      display: flex;
+      height: 100%;
+      width: 100%;
+      padding: 80px 40px 40px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: $lightGrey;
 
       .page-wrapper {
-        width: 60%;
+        width: 100%;
+        max-width: 640px;
         margin: auto;
-
-        @media screen and (max-width: 1000px) {
-          width: 100%;
-        }
       }
     }
   }
